@@ -1,4 +1,4 @@
-<ion-view view-title="menu">
+<ion-view view-title="Score Tracker">
   <ion-nav-bar class="bar-stable">
     <ion-nav-back-button class="button-clear">
     </ion-nav-back-button>
@@ -7,10 +7,11 @@
       </button>
     </ion-nav-buttons>
   </ion-nav-bar>
-  <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="game in games track by $index" href="#/scoretracker/game/{{game.id}}" track>
+  <ion-content has-bouncing="false">
+    <ion-list show-delete="isDelete" on-swipe-right="showDelete()" on-swipe-left="hideDelete()">
+      <ion-item ng-repeat="game in games track by $index" href="#/scoretracker/game/{{game.id}}" >
         {{game.title}}
+        <ion-delete-button class="ion-minus-circled" ng-click="deleteGame(game)"></ion-delete-button>
       </ion-item>
     </ion-list>
   </ion-content>

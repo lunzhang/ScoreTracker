@@ -3,6 +3,14 @@ scoretracker.controller('menuController', function($scope, $ionicModal, $scoretr
 
   $scope.games = $scoretracker.getGames();
   $scope.addGame = $scoretracker.addGame;
+  $scope.deleteGame = $scoretracker.deleteGame;
+  $scope.isDelete = false;
+  $scope.showDelete = function(){
+    $scope.isDelete=true;
+  };
+  $scope.hideDelete = function(){
+    $scope.isDelete=false;
+  };
   window.$scoretracker = $scoretracker;
   window.$localStorage = $localStorage;
 });
