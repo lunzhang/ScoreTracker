@@ -1,6 +1,5 @@
 scoretracker.controller('menuController', function($scope, $ionicModal, $scoretracker,$localStorage) {
 
-
   $scope.games = $scoretracker.getGames();
   $scope.addGame = $scoretracker.addGame;
   $scope.deleteGame = $scoretracker.deleteGame;
@@ -11,6 +10,4 @@ scoretracker.controller('menuController', function($scope, $ionicModal, $scoretr
   $scope.hideDelete = function(){
     $scope.isDelete=false;
   };
-  window.$scoretracker = $scoretracker;
-  window.$localStorage = $localStorage;
 });

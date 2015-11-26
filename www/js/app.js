@@ -42,7 +42,8 @@ var scoretracker = angular.module('scoretracker', ['ionic','ngStorage'])
     url: '/game/:gameId',
     views: {
       'menuContent': {
-        templateUrl: 'templates/game.html'
+        templateUrl: 'templates/game.html',
+          controller: 'gameController'
       }
     }
   });
