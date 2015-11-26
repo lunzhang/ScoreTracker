@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var scoretracker = angular.module('scoretracker', ['ionic'])
+var scoretracker = angular.module('scoretracker', ['ionic','ngStorage'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -13,7 +13,6 @@ var scoretracker = angular.module('scoretracker', ['ionic'])
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
-
     }
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
@@ -25,30 +24,28 @@ var scoretracker = angular.module('scoretracker', ['ionic'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('scoretracker', {
+  .state('scoretracker', {
     url: '/scoretracker',
-    abstract: true,
-    templateUrl: 'templates/menu.html',
-    controller: 'menuController'
+    abtract:true,
+    templateUrl: 'templates/scoretracker.html'
   })
-
   .state('scoretracker.menu', {
     url: '/menu',
     views: {
       'menuContent': {
-        templateUrl: 'templates/menu.html'
+        templateUrl: 'templates/menu.html',
+        controller: 'menuController'
       }
     }
   })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
+  .state('scoretracker.game', {
+    url: '/game/:gameId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/game.html'
       }
-    });
+    }
+  });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/menu');
+  $urlRouterProvider.otherwise('/scoretracker/menu');
 });
