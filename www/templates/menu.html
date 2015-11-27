@@ -2,13 +2,17 @@
   <ion-nav-bar class="bar-stable">
     <ion-nav-back-button class="button-clear">
     </ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon icon ion-minus-round" ng-click="changeDelete()">
+      </button>
+    </ion-nav-buttons>
     <ion-nav-buttons side="right">
       <button class="button button-icon icon ion-plus-round" ng-click="addGame()">
       </button>
     </ion-nav-buttons>
   </ion-nav-bar>
   <ion-content has-bouncing="false">
-    <ion-list show-delete="isDelete" on-swipe-right="showDelete()" on-swipe-left="hideDelete()">
+    <ion-list show-delete="isDelete">
       <ion-item ng-repeat="game in games track by $index" href="#/scoretracker/game/{{game.id}}" >
         {{game.title}}
         <ion-delete-button class="ion-minus-circled" ng-click="deleteGame(game)"></ion-delete-button>

@@ -4,10 +4,7 @@ scoretracker.controller('menuController', function($scope, $ionicModal, $scoretr
   $scope.addGame = $scoretracker.addGame;
   $scope.deleteGame = $scoretracker.deleteGame;
   $scope.isDelete = false;
-  $scope.showDelete = function(){
-    $scope.isDelete=true;
-  };
-  $scope.hideDelete = function(){
-    $scope.isDelete=false;
+  $scope.changeDelete = function(){
+    $scope.isDelete=!$scope.isDelete;
   };
 });
