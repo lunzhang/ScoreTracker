@@ -4,26 +4,43 @@
     <ion-nav-back-button class="button-clear">
     </ion-nav-back-button>
     <ion-nav-buttons side="right">
-      <button class="button button-icon icon ion-edit" ng-click="editGame()">
+      <button class="button button-icon icon ion-edit" data-toggle="modal" data-target="#editModal" data-backdrop="false">
       </button>
     </ion-nav-buttons>
   </ion-nav-bar>
 
-  <ion-content has-bouncing="false" >
-      <ion-modal-view id="edit-modal">
-        <ion-header-bar class="bar bar-header bar-positive">
-          <h1 class="title">New Contact</h1>
-          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
-        </ion-header-bar>
-        <ion-content class="padding">
-          <div class="list">
-            <label class="item item-input">
-              <span class="input-label">First Name</span>
-              <input ng-model="newUser.firstName" type="text">
-            </label>
-            <button class="button button-full button-positive" ng-click="createContact(newUser)">Create</button>
+  <!-- Modal -->
+  <div id="editModal" class="modal fade" role="dialog" >
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Eidt Game</h4>
+        </div>
+        <div class="modal-body">
+          <div class="input-group">
+            <span class="input-group-addon">Title</span>
+            <input type="text" class="form-control" ng-model="currentGame.title">
           </div>
-        </ion-content>
-      </ion-modal-view>
+          <div class="input-group">
+            <span class="input-group-addon">Player 1</span>
+            <input type="text" class="form-control" ng-model="currentGame.player1">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon">Player 2</span>
+            <input type="text" class="form-control" ng-model="currentGame.player2">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Change</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <ion-content has-bouncing="false" >
   </ion-content>
 </ion-view>

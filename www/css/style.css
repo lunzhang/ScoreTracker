@@ -5821,5 +5821,23 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.game #edit-game {
-  margin-top: 100px; }
+.game #editModal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .game #editModal .input-group {
+    margin: 25px 0px 25px 0px;
+    width: 100%; }
+    .game #editModal .input-group .input-group-addon {
+      width: 20%; }
+    .game #editModal .input-group .form-control {
+      padding-left: 5px;
+      border: 1px solid #918E8E; }
+
+.game .center {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%); }
