@@ -1,5 +1,29 @@
-<ion-view view-title="game">
+<ion-view view-title="{{currentGame.title}}" class="game">
+
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-back-button class="button-clear">
+    </ion-nav-back-button>
+    <ion-nav-buttons side="right">
+      <button class="button button-icon icon ion-edit" ng-click="editGame()">
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
   <ion-content has-bouncing="false" >
-{{currentGame.title}}
+      <ion-modal-view id="edit-modal">
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">New Contact</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">First Name</span>
+              <input ng-model="newUser.firstName" type="text">
+            </label>
+            <button class="button button-full button-positive" ng-click="createContact(newUser)">Create</button>
+          </div>
+        </ion-content>
+      </ion-modal-view>
   </ion-content>
 </ion-view>

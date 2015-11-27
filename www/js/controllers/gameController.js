@@ -1,4 +1,13 @@
-scoretracker.controller('gameController', function($scope, $ionicModal, $scoretracker,$localStorage) {
+scoretracker.controller('gameController', function($scope,$scoretracker,$localStorage,$ionicModal) {
 
-  $scope.currentGame = $localStorage.games[0];
+  $scope.currentGame = $scoretracker.currentGame;
+  var modal = jQuery("#edit-modal").andSelf().html();
+  $scope.modal = $ionicModal.fromTemplate(modal, {
+      scope: $scope,
+      animation: 'slide-in-up'
+  });
+
+  $scope.editGame = function() {
+     $scope.modal.show();
+   };
 });

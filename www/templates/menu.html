@@ -1,7 +1,5 @@
 <ion-view view-title="Score Tracker">
   <ion-nav-bar class="bar-stable">
-    <ion-nav-back-button class="button-clear">
-    </ion-nav-back-button>
     <ion-nav-buttons side="left">
       <button class="button button-icon icon ion-minus-round" ng-click="changeDelete()">
       </button>
@@ -13,7 +11,7 @@
   </ion-nav-bar>
   <ion-content has-bouncing="false">
     <ion-list show-delete="isDelete">
-      <ion-item ng-repeat="game in games track by $index" href="#/scoretracker/game/{{game.id}}" >
+      <ion-item ng-repeat="game in games track by $index" href="#/scoretracker/game/{{game.id}}" ng-click="setCurrentGame(game)">
         {{game.title}}
         <ion-delete-button class="ion-minus-circled" ng-click="deleteGame(game)"></ion-delete-button>
       </ion-item>

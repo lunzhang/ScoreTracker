@@ -1,5 +1,5 @@
 scoretracker.service('$scoretracker', function($localStorage) {
-
+  var currentGame;
   this.getGames = function(){
     return $localStorage.games;
   }

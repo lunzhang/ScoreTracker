@@ -5821,5 +5821,5 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.lun {
-  color: red; }
+.game #edit-game {
+  margin-top: 100px; }
