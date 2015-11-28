@@ -5836,8 +5836,42 @@ button.close {
       border: 1px solid #918E8E; }
 
 .game .center {
+  position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
   -ms-transform: translateY(-50%) translateX(-50%);
   transform: translateY(-50%) translateX(-50%); }
+
+.game h2 {
+  font-size: 100px; }
+
+.game hr {
+  border-top: 1px solid black; }
+
+.game .container {
+  margin-top: 25px; }
+
+@media (max-width: 767px) {
+  .game h2 {
+    font-size: 75px; } }
+
+.menuScreen .header-item {
+  font-size: 25px;
+  font-family: cursive;
+  text-align: center !important; }
+
+@media (max-width: 767px) {
+  .menuScreen h1 {
+    font-size: 20px; }
+  .menuScreen h2 {
+    font-size: 80px; } }
+
+.menuScreen .ion-plus-round {
+  color: #33cd5f !important; }
+
+.menuScreen .ion-minus-round {
+  color: #ef473a !important; }
+
+.menuScreen .item {
+  border-color: grey; }

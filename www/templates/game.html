@@ -1,6 +1,6 @@
 <ion-view view-title="{{currentGame.title}}" class="game">
 
-  <ion-nav-bar class="bar-stable">
+  <ion-nav-bar class="bar-dark">
     <ion-nav-back-button class="button-clear">
     </ion-nav-back-button>
     <ion-nav-buttons side="right">
@@ -16,7 +16,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Eidt Game</h4>
+          <h4 class="modal-title">Eidt </h4>
         </div>
         <div class="modal-body">
           <div class="input-group">
@@ -36,11 +36,59 @@
           <button type="button" class="btn btn-default" data-dismiss="modal">Change</button>
         </div>
       </div>
-
     </div>
   </div>
 
-
   <ion-content has-bouncing="false" >
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h1>
+            HI
+            {{currentGame.player1}}
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">
+          <button class="button button-icon icon ion-minus-round center assertive" ng-click="subPoint1()">
+          </button>
+        </div>
+        <div class="col-xs-6 text-center positive">
+          <h2>
+            {{currentGame.player1Score}}
+          </h2>
+        </div>
+        <div class="col-xs-3">
+          <button class="button button-icon icon ion-plus-round center balanced" ng-click="addPoint1()">
+          </button>
+        </div>
+      </div>
+      <hr/>
+      <div class="row">
+        <div class="col-xs-12 text-center ">
+          <h1>
+            HI
+            {{currentGame.player2}}
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">
+          <button class="button button-icon icon ion-minus-round center assertive" ng-click="subPoint2()">
+          </button>
+        </div>
+        <div class="col-xs-6 text-center positive">
+          <h2>
+            {{currentGame.player2Score}}
+          </h2>
+        </div>
+        <div class="col-xs-3">
+          <button class="button button-icon icon ion-plus-round center balanced" ng-click="addPoint2()">
+          </button>
+        </div>
+      </div>
+    </div>
   </ion-content>
+
 </ion-view>

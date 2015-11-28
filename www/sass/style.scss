@@ -1,6 +1,6 @@
 @import "../lib/bootstrap/stylesheets/bootstrap";
 
-$xs-only: (max-width: 767px);
+$xs-only: "(max-width: 767px)";
 $small-only: "(min-width:768px) and (max-width:991px)";
 $medium-only: "(min-width:992px) and (max-width:1199px)";
 $large-only: "(min-width:1200px)";
@@ -24,10 +24,51 @@ $large-only: "(min-width:1200px)";
     }
   }
   .center{
+    position: absolute;
     top: 50%;
     left:50%;
     -webkit-transform: translateY(-50%) translateX(-50%);
     -ms-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
+  }
+  h2{
+    font-size: 100px;
+  }
+  hr{
+    border-top: 1px solid black;
+  }
+  .container{
+    margin-top: 25px;
+  }
+  @media #{$xs-only}{
+    h2{
+      font-size: 75px;
+    }
+  }
+}
+
+.menuScreen{
+  .header-item{
+    font-size: 25px;
+    font-family: cursive;
+    text-align: center !important;
+  }
+
+  @media #{$xs-only}{
+    h1{
+      font-size: 20px;
+    }
+    h2{
+      font-size: 80px;
+    }
+  }
+  .ion-plus-round{
+    color:#33cd5f !important;
+  }
+  .ion-minus-round{
+    color: #ef473a !important;
+  }
+  .item{
+    border-color:grey;
   }
 }

@@ -2,7 +2,7 @@ scoretracker.service('$scoretracker', function($localStorage) {
   var currentGame;
   this.getGames = function(){
     return $localStorage.games;
-  }
+  };
   if(!$localStorage.games){
     $localStorage.games= {};
   }
@@ -20,10 +20,10 @@ scoretracker.service('$scoretracker', function($localStorage) {
       player2Score : 0
     };
     $localStorage.games[nextId]=newGame;
-  }
+  };
 
   this.deleteGame = function(game){
     delete $localStorage.games[game.id];
-  }
+  };
 
 });
