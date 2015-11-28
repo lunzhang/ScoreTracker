@@ -5856,6 +5856,9 @@ button.close {
   .game h2 {
     font-size: 75px; } }
 
+.game .header-item {
+  text-align: center !important; }
+
 .menuScreen .header-item {
   font-size: 25px;
   font-family: cursive;
