@@ -22,6 +22,9 @@ $large-only: "(min-width:1200px)";
         border: 1px solid #918E8E;
       }
     }
+    .close{
+      font-size: 30px;
+    }
   }
   .center{
     position: absolute;
@@ -53,7 +56,6 @@ $large-only: "(min-width:1200px)";
 .menuScreen{
   .header-item{
     font-size: 25px;
-    font-family: cursive;
     text-align: center !important;
   }
 

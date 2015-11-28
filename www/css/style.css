@@ -5834,6 +5834,8 @@ button.close {
     .game #editModal .input-group .form-control {
       padding-left: 5px;
       border: 1px solid #918E8E; }
+  .game #editModal .close {
+    font-size: 30px; }
 
 .game .center {
   position: absolute;
@@ -5861,7 +5863,6 @@ button.close {
 
 .menuScreen .header-item {
   font-size: 25px;
-  font-family: cursive;
   text-align: center !important; }
 
 @media (max-width: 767px) {
